@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abonelik Paketleri</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <input type="hidden" id="jsonData"
+            value=''>
+        <div class="row">
+
+            <div class="col-12">
+                <div class="row">
+                    <!-- Yeni Özellik Butonu (En Sol) -->
+                    <div class="col-4 text-left">
+                        <button onclick="newProperty()" class="btn btn-info">Yeni Özellik</button>
+                    </div>
+                    
+                    <!-- Tabloyu Güncelle Butonu (Orta) -->
+                    <div class="col-4 text-center">
+                        <button onclick="manualUpdate()" class="btn btn-danger">Tabloyu Güncelle!!</button>
+                    </div>
+                    
+                    <!-- Yeni Paket Butonu (En Sağ) -->
+                    <div class="col-4 text-right">
+                        <button onclick="newPack()" class="btn btn-success">Yeni Paket</button>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-12 mt-5">
+                <table id="tableOfPack" class="table">
+                    <tbody>
+                        <tr id="packages">
+                            <td id="packName">Paket Adı</td>
+                            <td><input type="text" class="form-control" name="pack[]" id="pack-1" value="Silver"></td>
+                            <td><input type="text" class="form-control" name="pack[]" id="pack-2" value="Elite"></td>
+                            <td><input type="text" class="form-control" name="pack[]" id="pack-3" value="Premium"></td>
+                        </tr>
+
+                    <tbody id="properties">
+
+                        <tr>
+                            <td><input class="form-control" type="text" name="property[]" id="property-1"
+                                    value="Özellik Adı 1"></td>
+                            <td><input type="checkbox" name="check[]" id="prop-pack-1"></td>
+                            <td><input type="checkbox" name="check[]" id="prop-pack-2"></td>
+                            <td><input type="checkbox" name="check[]" id="prop-pack-3"></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                            <input class="form-control" type="text" name="property[]" id="property-2" value="Özellik Adı 2"></td>
+                            <td><input type="checkbox" name="check[]" id="prop-pack-1"></td>
+                            <td><input type="checkbox" name="check[]" id="prop-pack-2"></td>
+                            <td><input type="checkbox" name="check[]" id="prop-pack-3"></td>
+                        </tr>
+
+                    </tbody>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="./subscription.js"></script>
+</body>
+
+</html>
